@@ -16,8 +16,10 @@ sub_data <- cbind(timeUpdate, sub_data)
 sub_data <- subset(sub_data, select = -c(2,3))
 
 ## Pilot 1: Histogram of Global Active Power (kilowatts)
+png('plot1.png')
 hist(subdata$Global_active_power, 
      col="red",
      xlab="Global Active Power (kilowatts)", 
      ylab="Frequency",
      main = "Global Active Power")
+dev.off();
